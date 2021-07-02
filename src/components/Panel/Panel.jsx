@@ -12,7 +12,6 @@ const Panel = (panelProps) => {
   const { layout = panel.layout, ...props } = panelProps;
   return (
     <div
-      data-testid="panel-1"
       className={overrideTailwindClasses(
         classnames(
           {
@@ -45,11 +44,10 @@ Panel.propTypes = {
   children: PropTypes.any,
   className: PropTypes.string,
   layout: PropTypes.oneOf([
-    "default",
     "error",
-    "warning",
     "success",
-    "info",
+    "warning",
+    "default",
     "paper",
     "dashed",
   ]),
